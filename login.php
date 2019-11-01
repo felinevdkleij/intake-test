@@ -24,7 +24,7 @@
 
                 <!--            TODO: zorg ervoor dat bij password input wat je invult verborgen/niet zichtbaar is-->
 
-                <td><input name="password"></td>
+                <td><input type='password' name="password"></td>
             </tr>
             <tr>
                 <td>

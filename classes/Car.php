@@ -1,8 +1,6 @@
 <?php
 declare(strict_types=1);
-
 include_once(__DIR__.'/../services/Database.php');
-
 
 /**
  * Class Car
@@ -145,15 +143,13 @@ class Car
 
     /**
      * Returns the owner of the car
-     * @return array/null
+     * @return Customer
      */
     public function getCustomerOfCar()
     {
-        $customer = $this->db->getAllRows(sprintf('SELECT * FROM customer WHERE id = %d', $this->getCustomerId()));
-        if (count($customer) > 0) {
-            return $customer[0];
-        }
-        return null;
+        $customer = new Customer();
+        $customer-> loadCustomer($this->getCustomerId());
+        return $customer;
     }
 
     /**
