@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!$_SESSION['logged_in']) {
+    header("Location: login.php");
+}
+
 require(__DIR__.'/services/Database.php');
 $db = new Database;
 $type = $_POST['save_type'];

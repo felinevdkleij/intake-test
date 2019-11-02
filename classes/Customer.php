@@ -118,7 +118,7 @@ class Customer
 
      public function getNrOfCars(): int
      {
-         return count($this->db->getAllRows(sprintf('SELECT * FROM car WHERE customer_id = $d', $this->getId())));
+         return count($this->db->getAllRows(sprintf('SELECT * FROM car WHERE customer_id = %d', $this->getId())));
      }
 
 
