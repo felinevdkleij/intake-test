@@ -11,9 +11,7 @@ session_unset();
 if (isset($_POST['login']) && isset($_POST['password'])) {
     $login = $_POST['login'];
 
-//TODO: Gebruik SHA256 instead of md5 for securing the password
-    $password = md5($_POST['password']);
-
+    $password = hash('sha256', $_POST['password']);
 
     $users = $db->getAllRows(sprintf('SELECT *
                                 FROM user

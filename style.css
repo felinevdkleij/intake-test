@@ -2,8 +2,10 @@ html{
     font-family: 'Nunito', open-sans;
 }
 .vertical-center {
-    min-height: 80%; /* Fallback for browsers do NOT support vh unit */
-    min-height: 80vh; /* These two lines are counted as one :-)       */
+    /*min-height: 80%; !* Fallback for browsers do NOT support vh unit *!*/
+    /*min-height: 80vh; !* These two lines are counted as one :-)       *!*/
+
+    height: auto;
 
     display: flex;
     align-items: center;
@@ -23,18 +25,20 @@ table{
 form{
     width: 100%;
 }
-tr{
-
-}
 
 td{
     width: 40%;
-    height: 30px;
+    height: 50px;
 }
 
 select{
     height: 30px;
+}
 
+td input{
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid lightgrey;
 }
 
 

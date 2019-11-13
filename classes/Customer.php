@@ -120,8 +120,6 @@ class Customer
      {
          return count($this->db->getAllRows(sprintf('SELECT * FROM car WHERE customer_id = %d', $this->getId())));
      }
-
-
 }
 
 

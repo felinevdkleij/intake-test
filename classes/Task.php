@@ -12,6 +12,10 @@ Class Task
     private $car_id;
     private $task;
 
+    public function setDb($db): void
+    {
+        $this->db = $db;
+    }
     /**
     * the status number
     * @var int
@@ -86,7 +90,7 @@ Class Task
     {
         $this->db = new Database;
 
-        if(!empty($id)){
+        if(!empty($id)) {
             $this->loadTask($id);
         }
     }
@@ -113,7 +117,4 @@ Class Task
         $car-> loadCar($this->getCarId());
         return $car;
     }
-
-
-
 }

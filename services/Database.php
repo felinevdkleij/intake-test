@@ -1,8 +1,7 @@
 <?php
-
-
 //TODO: Add foreign key restraints between customers / cars / tasks. Ensure that cascading deletion is possible
 //TODO: (if you delete a customer, their cars and associated tasks should be deleted as well)
+// TODO: Maak het mogelijk om autos, klanten en klussen te verwijderen
 
 class Database
 {
@@ -10,7 +9,6 @@ class Database
 
     public function __construct()
     {
-        //TODO; Als login niet werkt moet de app een waarschuwing weergeven en niet crashen
         try {
             $this->db = new PDO('mysql:host=localhost:8889;dbname=intake', 'feline', 'c0nn3ct');
         } catch (Exception $e) {
@@ -36,7 +34,7 @@ class Database
             $stmt->execute($params);
             return $stmt;
         } catch (Exception $e) {
-            //echo $e->getMessage(); Niet echo'en want stackstrace weergeven is een security risico
+            echo $e->getMessage();
         }
     }
 
