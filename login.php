@@ -1,16 +1,6 @@
 <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
 
-<style>
-    .vertical-center {
-        min-height: 80%; /* Fallback for browsers do NOT support vh unit */
-        min-height: 80vh; /* These two lines are counted as one :-)       */
-
-        display: flex;
-        align-items: center;
-    }
-</style>
-
 <div class="container d-flex justify-content-center vertical-center">
     <form action="authenticate.php" method="POST">
         <h3>Login</h3>

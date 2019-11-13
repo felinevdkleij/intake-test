@@ -23,15 +23,21 @@ class Database
     {
         $rows = [];
         foreach ($this->db->query($sql) as $row) {
+
             $rows[] = $row;
         }
         return $rows;
     }
 
-    public function execQuery($sql)
+    public function execQuery($sql, $params)
     {
-        $count = $this->db->exec($sql);
-        return $count;
+        try {
+            $stmt = $this->db->prepare($sql);
+            $stmt->execute($params);
+            return $stmt;
+        } catch (Exception $e) {
+            //echo $e->getMessage(); Niet echo'en want stackstrace weergeven is een security risico
+        }
     }
 
 }

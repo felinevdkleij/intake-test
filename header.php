@@ -13,4 +13,5 @@ if (!$_SESSION['logged_in']) {
 
     <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link type="text/css" rel="stylesheet" href="style.css"-->
 </header>
